@@ -3,13 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ADIWEB - Jasa Pembuatan Website</title>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<title>ADIWEB - Jasa Pembuatan Website</title>
 
 <style>
 
-html{scroll-behavior:smooth;}
+html{
+scroll-behavior:smooth;
+}
 
 body{
 margin:0;
@@ -26,9 +27,9 @@ justify-content:space-between;
 align-items:center;
 padding:20px 40px;
 border-bottom:1px solid #eee;
+background:white;
 position:sticky;
 top:0;
-background:white;
 }
 
 nav a{
@@ -41,11 +42,12 @@ margin-left:20px;
 
 .hero{
 text-align:center;
-padding:140px 20px;
+padding:150px 20px;
 }
 
 .hero h1{
 font-size:56px;
+margin-bottom:20px;
 }
 
 .hero p{
@@ -60,7 +62,7 @@ color:white;
 padding:12px 24px;
 border-radius:30px;
 text-decoration:none;
-margin-top:20px;
+margin-top:30px;
 }
 
 /* SECTION */
@@ -116,26 +118,6 @@ font-size:32px;
 font-weight:bold;
 }
 
-/* COUNTER */
-
-.counter{
-font-size:40px;
-font-weight:bold;
-}
-
-/* WHATSAPP FLOAT */
-
-.wa{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-font-size:28px;
-padding:15px;
-border-radius:50%;
-}
-
 /* FOOTER */
 
 footer{
@@ -143,9 +125,10 @@ background:#111;
 color:white;
 text-align:center;
 padding:40px;
+margin-top:80px;
 }
 
-/* SCROLL ANIMATION */
+/* ANIMASI SCROLL */
 
 .reveal{
 opacity:0;
@@ -164,18 +147,24 @@ transform:translateY(0);
 <body>
 
 <nav>
+
 <h3>ADIWEB</h3>
+
 <div>
 <a href="#home">Home</a>
 <a href="#harga">Harga</a>
 <a href="#kontak">Kontak</a>
 </div>
+
 </nav>
+
+<!-- HERO -->
 
 <section id="home" class="hero reveal">
 
-<h1>Buat Website Profesional</h1>
-<p>Website modern untuk bisnis Anda</p>
+<h1>Jasa Pembuatan Website</h1>
+
+<p>Website modern dan profesional untuk bisnis Anda</p>
 
 <a class="button" href="https://wa.me/6282349962035">
 Pesan Sekarang
@@ -183,62 +172,11 @@ Pesan Sekarang
 
 </section>
 
-<!-- COUNTER -->
-
-<section class="section reveal">
-
-<h2>Dipercaya Banyak Klien</h2>
-
-<div class="grid">
-
-<div class="card">
-<div class="counter" id="c1">0</div>
-<p>Klien</p>
-</div>
-
-<div class="card">
-<div class="counter" id="c2">0</div>
-<p>Website Dibuat</p>
-</div>
-
-<div class="card">
-<div class="counter" id="c3">0</div>
-<p>Bulan Pengalaman</p>
-</div>
-
-</div>
-
-</section>
-
-<!-- PORTOFOLIO -->
-
-<section class="section reveal">
-
-<h2>Portofolio</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>Website Toko Online</h3>
-</div>
-
-<div class="card">
-<h3>Website Perusahaan</h3>
-</div>
-
-<div class="card">
-<h3>Website Personal</h3>
-</div>
-
-</div>
-
-</section>
-
 <!-- HARGA -->
 
 <section id="harga" class="section reveal">
 
-<h2>Paket Website 🔥 Promo</h2>
+<h2>Paket Website</h2>
 
 <div class="grid">
 
@@ -249,7 +187,7 @@ Pesan Sekarang
 <h3>Basic</h3>
 
 <div class="old">Rp250K</div>
-<div class="price">Rp99K</div>
+<div class="price">Rp100K</div>
 
 <p>1 Halaman Website</p>
 
@@ -297,78 +235,20 @@ Pesan
 
 </section>
 
-<!-- TESTIMONI -->
-
-<section class="section reveal">
-
-<h2>Testimoni</h2>
-
-<div class="grid">
-
-<div class="card">
-<p>"Website sangat bagus dan cepat selesai."</p>
-<b>- Budi</b>
-</div>
-
-<div class="card">
-<p>"Desain modern dan profesional."</p>
-<b>- Andi</b>
-</div>
-
-<div class="card">
-<p>"Harga murah tapi kualitas bagus."</p>
-<b>- Rina</b>
-</div>
-
-</div>
-
-</section>
-
-<!-- CTA -->
-
-<section class="section reveal">
-
-<h2>Siap Membuat Website Anda?</h2>
-
-<p>Konsultasi gratis sekarang</p>
-
-<a class="button" href="https://wa.me/6282349962035">
-Chat WhatsApp Sekarang
-</a>
-
-</section>
-
 <footer id="kontak">
 
 <h3>ADIWEB</h3>
 
-<p>Instagram: adiii20y</p>
-<p>WhatsApp: 082349962035</p>
+<p>Instagram : adiii20y</p>
+<p>WhatsApp : 082349962035</p>
 
 <p>© 2026 ADIWEB</p>
 
 </footer>
 
-<a href="https://wa.me/6282349962035" class="wa">
-<i class="fa-brands fa-whatsapp"></i>
-</a>
-
 <script>
 
-let a=0,b=0,c=0;
-
-setInterval(()=>{
-if(a<120)a++;
-if(b<150)b++;
-if(c<24)c++;
-
-document.getElementById("c1").innerText=a;
-document.getElementById("c2").innerText=b;
-document.getElementById("c3").innerText=c;
-
-},30);
-
-/* SCROLL ANIMATION */
+/* ANIMASI SCROLL */
 
 function reveal(){
 
