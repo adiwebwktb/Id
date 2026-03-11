@@ -191,7 +191,7 @@ color:white;
 }
 
 .reveal{
-opacity:0;
+opacity:1;
 transform:translateY(60px);
 transition:1s;
 }
@@ -422,7 +422,9 @@ nav.classList.remove("scrolled");
 }
 
 });
-  
+
+window.addEventListener("scroll", reveal);
+reveal();  
 </script>
 
 </body>
