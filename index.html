@@ -173,15 +173,25 @@ background-position:center;
 
 /* SOCIAL */
 
+.social{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:12px;
+margin-top:20px;
+justify-items:center;
+}
+
 .social a{
-margin:0 12px;
-font-size:20px;
+font-size:18px;
 text-decoration:none;
 color:white;
+display:flex;
+align-items:center;
+gap:8px;
 }
 
 .social i{
-margin-right:6px;
+font-size:20px;
 }
 
 /* FOOTER */
@@ -191,6 +201,15 @@ text-align:center;
 padding:40px;
 background:#111;
 color:white;
+}
+  
+footer h3{
+font-size:26px;
+margin-bottom:5px;
+}
+  
+footer p{
+color:#ccc;
 }
 
 .reveal{
