@@ -23,26 +23,80 @@ background:linear-gradient(180deg,#ffffff,#f5f7fa);
 /* NAVBAR */
 
 nav{
+<nav>
+
+<div class="brand">
+<img src="adiweb.png" class="logo">
+<span class="brand-name">ADIWEB</span>
+</div>
+
+<div class="menu-toggle" onclick="toggleMenu()">
+<i class="fa-solid fa-bars"></i>
+</div>
+
+<div class="menu" id="menu">
+<a href="#home">Home</a>
+<a href="#layanan">Layanan</a>
+<a href="#harga">Harga</a>
+<a href="#kontak">Kontak</a>
+</div>
+
+</nav>
+
+.brand{
 display:flex;
-justify-content:space-between;
 align-items:center;
-padding:20px 40px;
-border-bottom:1px solid #eee;
-position:sticky;
-top:0;
+gap:8px;
+}
+
+.logo{
+height:32px;
+}
+
+.brand-name{
+font-size:20px;
+font-weight:700;
+}
+
+.menu{
+display:flex;
+gap:20px;
+}
+
+.menu-toggle{
+display:none;
+font-size:24px;
+cursor:pointer;
+}
+
+/* MOBILE */
+
+@media (max-width:768px){
+
+.menu{
+display:none;
+flex-direction:column;
+position:absolute;
+top:70px;
+right:20px;
 background:white;
-z-index:1000;
+padding:20px;
+border-radius:10px;
+box-shadow:0 10px 20px rgba(0,0,0,0.1);
 }
 
-nav.scrolled{
-box-shadow:0 5px 20px rgba(0,0,0,0.08);
+.menu a{
+margin:10px 0;
 }
 
-nav a{
-text-decoration:none;
-color:#111;
-margin-left:20px;
-font-weight:500;
+.menu-toggle{
+display:block;
+}
+
+.menu.active{
+display:flex;
+}
+
 }
 
 /* HERO */
@@ -447,7 +501,11 @@ nav.classList.remove("scrolled");
 });
 
 window.addEventListener("scroll", reveal);
-reveal();  
+reveal(); 
+
+function toggleMenu(){
+document.getElementById("menu").classList.toggle("active");
+}
 </script>
 
 </body>
