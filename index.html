@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ADIWEB - Jasa Pembuatan Website</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+margin:0;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto;
+color:#111;
+background:white;
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 40px;
+border-bottom:1px solid #eee;
+position:sticky;
+top:0;
+background:white;
+z-index:1000;
+}
+
+nav a{
+text-decoration:none;
+color:#111;
+margin-left:20px;
+font-weight:500;
+}
+
+/* HERO */
+
+.hero{
+text-align:center;
+padding:140px 20px;
+}
+
+.hero h1{
+font-size:56px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:22px;
+color:#555;
+}
+
+.button{
+display:inline-block;
+margin-top:10px;
+background:black;
+color:white;
+padding:10px 22px;
+border-radius:30px;
+text-decoration:none;
+cursor:pointer;
+}
+
+/* BUTTON OUTLINE */
+
+.button-outline{
+border:2px solid black;
+padding:10px 22px;
+border-radius:30px;
+text-decoration:none;
+color:black;
+cursor:pointer;
+}
+
+.button-outline:hover{
+background:black;
+color:white;
+}
+
+.buttons{
+display:flex;
+justify-content:center;
+gap:10px;
+margin-top:15px;
+}
+
+.hero img{
+margin-top:50px;
+width:90%;
+max-width:900px;
+border-radius:12px;
+}
+
+/* SECTION */
+
+.section{
+padding:120px 20px;
+max-width:1000px;
+margin:auto;
+text-align:center;
+}
+
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+margin-top:50px;
+}
+
+.card{
+padding:40px;
+border-radius:14px;
+background:#f5f5f7;
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.price{
+font-size:32px;
+font-weight:bold;
+margin:15px 0;
+}
+
+/* PARALLAX */
+
+.parallax{
+background-image:url("https://images.unsplash.com/photo-1498050108023-c5249f4df085");
+height:400px;
+background-attachment:fixed;
+background-size:cover;
+background-position:center;
+}
+
+/* SOCIAL */
+
+.social a{
+margin:0 12px;
+font-size:20px;
+text-decoration:none;
+color:white;
+}
+
+.social i{
+margin-right:6px;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:40px;
+background:#111;
+color:white;
+}
+
+.reveal{
+opacity:0;
+transform:translateY(60px);
+transition:1s;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+
+.watermark{
+position:fixed;
+bottom:10px;
+left:10px;
+opacity:0.2;
+font-weight:bold;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+
+<h3>ADIWEB</h3>
+
+<div>
+<a href="#home">Home</a>
+<a href="#layanan">Layanan</a>
+<a href="#harga">Harga</a>
+<a href="#kontak">Kontak</a>
+</div>
+
+</nav>
+
+<section id="home" class="hero reveal">
+
+<h1>Buat Website Profesional</h1>
+
+<p>Website modern untuk bisnis dan usaha Anda</p>
+
+<a class="button" href="https://wa.me/6282349962035">
+Pesan Sekarang
+</a>
+
+<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71">
+
+</section>
+
+<div class="parallax"></div>
+
+<section id="layanan" class="section reveal">
+
+<h2>Layanan Website</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Website UMKM</h3>
+<p>Website untuk promosi usaha kecil</p>
+</div>
+
+<div class="card">
+<h3>Website Perusahaan</h3>
+<p>Website profesional untuk bisnis</p>
+</div>
+
+<div class="card">
+<h3>Portal Informasi</h3>
+<p>Website berita dan komunitas</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="harga" class="section reveal">
+
+<h2>Paket Website</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>Basic</h3>
+<div class="price">Rp100K</div>
+<p>1 halaman website</p>
+
+<div class="buttons">
+<a class="button-outline" onclick="detailBasic()">Detail</a>
+<a class="button" onclick="basic()">Pesan</a>
+</div>
+
+</div>
+
+<div class="card">
+
+<h3>Standard</h3>
+<div class="price">Rp200K</div>
+<p>3 halaman website</p>
+
+<div class="buttons">
+<a class="button-outline" onclick="detailStandard()">Detail</a>
+<a class="button" onclick="standard()">Pesan</a>
+</div>
+
+</div>
+
+<div class="card">
+
+<h3>Premium</h3>
+<div class="price">Rp350K</div>
+<p>5 halaman website</p>
+
+<div class="buttons">
+<a class="button-outline" onclick="detailPremium()">Detail</a>
+<a class="button" onclick="premium()">Pesan</a>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer id="kontak">
+
+<h3>ADIWEB</h3>
+
+<p>Jasa Pembuatan Website Profesional</p>
+
+<div class="social">
+
+<a href="https://instagram.com/adiii20y">
+<i class="fa-brands fa-instagram"></i> Instagram
+</a>
+
+<a href="https://wa.me/6282349962035">
+<i class="fa-brands fa-whatsapp"></i> WhatsApp
+</a>
+
+</div>
+
+<p style="margin-top:20px;">© 2026 ADIWEB</p>
+
+</footer>
+
+<div class="watermark">
+SARIADIN(ADY)
+</div>
+
+<script>
+
+function basic(){
+window.open("https://wa.me/6282349962035?text=Halo saya ingin pesan Paket Basic");
+}
+
+function standard(){
+window.open("https://wa.me/6282349962035?text=Halo saya ingin pesan Paket Standard");
+}
+
+function premium(){
+window.open("https://wa.me/6282349962035?text=Halo saya ingin pesan Paket Premium");
+}
+
+function detailBasic(){
+alert("Paket Basic\n\n- 1 Halaman Website\n- Mobile Friendly\n- Tombol WhatsApp\n- Revisi 1x\n- Pengerjaan 1 Hari");
+}
+
+function detailStandard(){
+alert("Paket Standard\n\n- 3 Halaman Website\n- Desain Profesional\n- Mobile Friendly\n- Form Kontak\n- Revisi 2x");
+}
+
+function detailPremium(){
+alert("Paket Premium\n\n- 5 Halaman Website\n- Desain Premium\n- Animasi Website\n- Form Kontak\n- Revisi 3x");
+}
+
+function reveal(){
+
+var reveals=document.querySelectorAll(".reveal");
+
+for(var i=0;i<reveals.length;i++){
+
+var windowHeight=window.innerHeight;
+var elementTop=reveals[i].getBoundingClientRect().top;
+var elementVisible=150;
+
+if(elementTop < windowHeight - elementVisible){
+reveals[i].classList.add("active");
+}
+
+}
+
+}
+
+window.addEventListener("scroll",reveal);
+
+</script>
+
+</body>
+</html>
