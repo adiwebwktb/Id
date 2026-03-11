@@ -123,28 +123,6 @@ font-size:40px;
 font-weight:bold;
 }
 
-/* POPUP */
-
-.popup{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.6);
-display:flex;
-justify-content:center;
-align-items:center;
-}
-
-.popup-content{
-background:white;
-padding:40px;
-border-radius:10px;
-text-align:center;
-max-width:350px;
-}
-
 /* WHATSAPP FLOAT */
 
 .wa{
@@ -185,15 +163,6 @@ transform:translateY(0);
 
 <body>
 
-<div class="popup" id="promo">
-<div class="popup-content">
-<h2>🔥 Promo Website</h2>
-<p>Mulai dari</p>
-<h1>Rp99K</h1>
-<a class="button" href="https://wa.me/6282349962035">Pesan Sekarang</a>
-</div>
-</div>
-
 <nav>
 <h3>ADIWEB</h3>
 <div>
@@ -213,6 +182,8 @@ Pesan Sekarang
 </a>
 
 </section>
+
+<!-- COUNTER -->
 
 <section class="section reveal">
 
@@ -239,6 +210,32 @@ Pesan Sekarang
 
 </section>
 
+<!-- PORTOFOLIO -->
+
+<section class="section reveal">
+
+<h2>Portofolio</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Website Toko Online</h3>
+</div>
+
+<div class="card">
+<h3>Website Perusahaan</h3>
+</div>
+
+<div class="card">
+<h3>Website Personal</h3>
+</div>
+
+</div>
+
+</section>
+
+<!-- HARGA -->
+
 <section id="harga" class="section reveal">
 
 <h2>Paket Website 🔥 Promo</h2>
@@ -246,35 +243,61 @@ Pesan Sekarang
 <div class="grid">
 
 <div class="card">
+
 <div class="discount">-60%</div>
+
 <h3>Basic</h3>
+
 <div class="old">Rp250K</div>
 <div class="price">Rp99K</div>
+
 <p>1 Halaman Website</p>
-<a class="button" href="https://wa.me/6282349962035">Pesan</a>
+
+<a class="button" href="https://wa.me/6282349962035?text=Halo saya ingin pesan Paket Basic">
+Pesan
+</a>
+
 </div>
 
 <div class="card">
+
 <div class="discount">-38%</div>
+
 <h3>Standard</h3>
+
 <div class="old">Rp400K</div>
 <div class="price">Rp250K</div>
+
 <p>3 Halaman Website</p>
-<a class="button" href="https://wa.me/6282349962035">Pesan</a>
+
+<a class="button" href="https://wa.me/6282349962035?text=Halo saya ingin pesan Paket Standard">
+Pesan
+</a>
+
 </div>
 
 <div class="card">
+
 <div class="discount">-27%</div>
+
 <h3>Premium</h3>
+
 <div class="old">Rp550K</div>
 <div class="price">Rp399K</div>
+
 <p>5 Halaman Website</p>
-<a class="button" href="https://wa.me/6282349962035">Pesan</a>
+
+<a class="button" href="https://wa.me/6282349962035?text=Halo saya ingin pesan Paket Premium">
+Pesan
+</a>
+
 </div>
 
 </div>
 
 </section>
+
+<!-- TESTIMONI -->
 
 <section class="section reveal">
 
@@ -301,9 +324,12 @@ Pesan Sekarang
 
 </section>
 
+<!-- CTA -->
+
 <section class="section reveal">
 
 <h2>Siap Membuat Website Anda?</h2>
+
 <p>Konsultasi gratis sekarang</p>
 
 <a class="button" href="https://wa.me/6282349962035">
@@ -318,6 +344,8 @@ Chat WhatsApp Sekarang
 
 <p>Instagram: adiii20y</p>
 <p>WhatsApp: 082349962035</p>
+
+<p>© 2026 ADIWEB</p>
 
 </footer>
 
@@ -339,6 +367,8 @@ document.getElementById("c2").innerText=b;
 document.getElementById("c3").innerText=c;
 
 },30);
+
+/* SCROLL ANIMATION */
 
 function reveal(){
 
@@ -362,4 +392,4 @@ window.addEventListener("scroll",reveal);
 </script>
 
 </body>
-</html>
+  </html>
