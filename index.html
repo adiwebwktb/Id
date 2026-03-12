@@ -67,25 +67,42 @@ display:block;
 position:fixed;
 width:100%;
 height:100%;
-background:white;
+background:#0b0f19;
 display:flex;
 justify-content:center;
 align-items:center;
 z-index:9999;
 }
 
-.spinner{
-width:40px;
-height:40px;
-border:4px solid #ddd;
-border-top:4px solid #0066ff;
-border-radius:50%;
-animation:spin 1s linear infinite;
+.terminal{
+font-family:monospace;
+color:#00ff9c;
+font-size:18px;
+line-height:30px;
 }
 
-@keyframes spin{
-0%{transform:rotate(0deg);}
-100%{transform:rotate(360deg);}
+.terminal p{
+opacity:0;
+transform:translateY(10px);
+animation:show 0.6s forwards;
+}
+
+.terminal p:nth-child(1){animation-delay:0.5s;}
+.terminal p:nth-child(2){animation-delay:1.2s;}
+.terminal p:nth-child(3){animation-delay:2s;}
+.terminal p:nth-child(4){animation-delay:2.7s;}
+.terminal p:nth-child(5){animation-delay:3.5s;}
+
+.done{
+color:#00ff9c;
+font-weight:bold;
+}
+
+@keyframes show{
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 
 html{
@@ -314,7 +331,17 @@ font-weight:bold;
 </style>
 </head>
 <div id="loader">
-<div class="spinner"></div>
+
+<div class="terminal">
+
+<p>> Starting ADIGITAL...</p>
+<p>> Loading website engine...</p>
+<p>> Adding modern design...</p>
+<p>> Activating animation...</p>
+<p class="done">> Website Ready ✔</p>
+
+</div>
+
 </div>
 <body>
 
@@ -634,6 +661,15 @@ nav.classList.remove("scrolled");
 window.addEventListener("scroll", reveal);
 reveal();  
 </script>
+
+<script>
+window.addEventListener("load",function(){
+setTimeout(function(){
+document.getElementById("loader").style.display="none";
+},4200);
+});
+</script>
+  
 <script>
 
 window.addEventListener("load",function(){
