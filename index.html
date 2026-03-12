@@ -9,32 +9,48 @@
 
 <style>
 
-/* menu normal */
+/* Navbar */
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 20px;
+background:white;
+}
+
+/* Menu */
 .nav-menu{
 display:flex;
 gap:20px;
 }
 
-/* hamburger */
+/* Link */
+.nav-menu a{
+text-decoration:none;
+color:black;
+font-weight:500;
+}
+
+/* Hamburger */
 .menu-toggle{
 display:none;
 font-size:28px;
 cursor:pointer;
 }
 
-/* tampilan mobile */
-@media(max-width:768px){
+/* MOBILE */
+@media (max-width:768px){
 
 .nav-menu{
 display:none;
 flex-direction:column;
-background:white;
 position:absolute;
 top:60px;
 right:20px;
+background:white;
 padding:20px;
 border-radius:10px;
-box-shadow:0 5px 20px rgba(0,0,0,0.1);
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
 .nav-menu.active{
@@ -304,16 +320,17 @@ font-weight:bold;
 
 <nav>
 
-<h3>ADIWEB</h3>
+<h2>ADIWEB</h2>
 
-  <div class="menu-toggle" onclick="toggleMenu()">
-☰</div>
-  
-<div>
-<a href="#home">Home</a>
-<a href="#layanan">Layanan</a>
-<a href="#harga">Harga</a>
-<a href="#kontak">Kontak</a>
+<div class="menu-toggle" onclick="toggleMenu()">
+☰
+</div>
+
+<div class="nav-menu">
+<a href="#">Home</a>
+<a href="#">Layanan</a>
+<a href="#">Harga</a>
+<a href="#">Kontak</a>
 </div>
 
 </nav>
@@ -571,6 +588,15 @@ function toggleMenu(){
 document.querySelector(".nav-menu").classList.toggle("active");
 }
   </script>
+  <script>
+
+function toggleMenu(){
+document.querySelector(".nav-menu").classList.toggle("active");
+}
+
+  </script>
+  
 </body>
+
   </html>
   
