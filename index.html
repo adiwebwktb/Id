@@ -20,28 +20,6 @@ color:#111;
 background:linear-gradient(180deg,#ffffff,#f5f7fa);
 }
 
-/* NAVBAR */
-
-<nav>
-
-<div class="brand">
-<img src="adiweb.png" class="logo">
-<span class="brand-name">ADIWEB</span>
-</div>
-
-<div class="menu-toggle" onclick="toggleMenu()">
-<i class="fa-solid fa-bars"></i>
-</div>
-
-<div class="menu" id="menu">
-<a href="#home">Home</a>
-<a href="#layanan">Layanan</a>
-<a href="#harga">Harga</a>
-<a href="#kontak">Kontak</a>
-</div>
-
-</nav>
-
 .brand{
 display:flex;
 align-items:center;
@@ -290,11 +268,23 @@ font-weight:bold;
 
 <body>
 
+
 <nav>
 
-<h3>ADIWEB</h3>
+<div class="brand">
+<img src="adiweb.png" class="logo">
+<span class="brand-name">ADIWEB</span>
+</div>
 
-<div>
+<div class="menu-toggle" onclick="toggleMenu()">
+<i class="fa-solid fa-bars"></i>
+</div>
+
+<div class="menu-toggle" onclick="toggleMenu()">
+☰
+</div>
+  
+<div class="menu" id="menu">
 <a href="#home">Home</a>
 <a href="#layanan">Layanan</a>
 <a href="#harga">Harga</a>
